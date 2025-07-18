@@ -35,6 +35,19 @@ android {
         minSdkVersion 21
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    // ✅ 添加这段
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // ✅ 添加 kotlinOptions
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+
     lintOptions {
         disable 'InvalidPackage'
     }
